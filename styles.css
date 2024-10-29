@@ -1,0 +1,83 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: Arial, sans-serif;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: #f5f5f5;
+	color: #333;
+}
+
+h1 {
+	margin: 20px 0;
+	font-size: 5em;
+}
+
+p {
+	margin-bottom: 10px;
+	font-size: medium;
+	color: #666;
+}
+
+.grid-container {
+	display: grid;
+	grid-template-columns: repeat(50, 40px);
+	grid-template-rows: repeat(20, 40px);
+	gap: 4px;
+	padding: 10px;
+}
+
+.grid-item {
+	width: 40px;
+	height: 40px;
+	background-color: #e0e0e0;
+	border: 1px solid #ddd;
+	position: relative;
+}
+
+#box-1 {
+	background-color: #3498db;
+}
+
+#box-1:hover::after {
+	content: 'John Doe';
+	font-size: 10px;
+	color: white;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: rgba(0, 0, 0, 0.6);
+}
+
+#box-200 {
+	background-color: aquamarine;
+}
+
+#box-200:hover::after {
+	content: 'Faizan Shaik';
+	font-size: 10px;
+	color: white;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: rgba(0, 0, 0, 0.6);
+}
